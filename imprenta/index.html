@@ -19,7 +19,7 @@
         >
         <span class="brand-name">PRINT NEWS</span>
       </a>
-      <nav class="news-nav" aria-label="Secciones NEWS">
+      <nav class="news-nav" id="news-navigation" aria-label="Secciones NEWS">
         <a href="../textil/" class="">Textil</a>
         <a href="../merchandising/" class="">Merchandising</a>
         <a href="../imprenta/" class="active">Imprenta</a>
@@ -28,7 +28,8 @@
         <a href="../recursos/" class="">Recursos</a>
         <a href="../prensa-digital/" class="">Prensa Digital</a>
       </nav>
-      <a class="corporate-link" href="https://pkprint.es">Ir a pkprint.es</a>
+      <button class="news-menu-toggle" type="button" aria-expanded="false" aria-controls="news-navigation">Menú</button>
+      <a class="corporate-link" data-site-website href="https://pkprint.es">Ir a pkprint.es</a>
     </div>
   </header>
 
@@ -64,19 +65,19 @@
           <span class="article-index">01</span>
           <h3>Cómo elegir el papel adecuado</h3>
           <p>Gramaje, acabado y uso final: tres variables que conviene decidir juntas.</p>
-          <a class="article-link" href="#">Próximamente →</a>
+          <span class="article-link is-placeholder">Próximamente</span>
         </article>
 <article class="article-card">
           <span class="article-index">02</span>
           <h3>Errores frecuentes al preparar archivos</h3>
           <p>Sangrados, resolución, tipografías y colores antes de enviar a imprenta.</p>
-          <a class="article-link" href="#">Próximamente →</a>
+          <span class="article-link is-placeholder">Próximamente</span>
         </article>
 <article class="article-card">
           <span class="article-index">03</span>
           <h3>Cuándo merece la pena un acabado especial</h3>
           <p>Barnices, laminados y otros recursos para reforzar percepción y durabilidad.</p>
-          <a class="article-link" href="#">Próximamente →</a>
+          <span class="article-link is-placeholder">Próximamente</span>
         </article>
         </div>
       </div>
@@ -89,7 +90,7 @@
           <span class="eyebrow">GUÍA DESTACADA</span>
           <h2>La calidad de impresión empieza antes de imprimir.</h2>
           <p>Un archivo bien preparado y una elección correcta de soporte reducen problemas y mejoran el resultado final.</p>
-          <a class="btn btn-dark" href="#">Próximamente</a>
+          <span class="btn btn-dark is-placeholder">Próximamente</span>
         </div>
       </div>
     </section>
@@ -147,7 +148,7 @@
           <span class="eyebrow">CONOCIMIENTO PRÁCTICO</span>
           <h2>¿RGB o CMYK?</h2>
           <p>Para impresión comercial trabajamos con procesos pensados para reproducir color sobre soportes físicos. Preparar bien el archivo evita sorpresas.</p>
-          <a class="article-link" href="#">Seguir leyendo →</a>
+          <span class="article-link is-placeholder">Próximamente</span>
         </div>
       </div>
     </section>
@@ -184,7 +185,7 @@
     <div class="container footer-grid">
 
       <div class="footer-brand">
-        <a href="https://pkprint.es" class="footer-logo-link" aria-label="PK Print">
+        <a data-site-website href="https://pkprint.es" class="footer-logo-link" aria-label="PK Print">
           <img
             src="../img/logo-pkprint-blanco.png"
             alt="PK Print"
@@ -198,8 +199,8 @@
 
         <div class="footer-contact">
           <a href="tel:+34633442491">633 44 24 91</a>
-          <a href="mailto:comercial@pkprint.es">comercial@pkprint.es</a>
-          <a href="https://pkprint.es">pkprint.es</a>
+          <a data-site-email href="mailto:comercial@pkprint.es">comercial@pkprint.es</a>
+          <a data-site-website href="https://pkprint.es">pkprint.es</a>
         </div>
       </div>
 
@@ -216,7 +217,6 @@
         <span class="footer-title">PK PRINT NEWS</span>
         <a href="../recursos/">Recursos</a>
         <a href="../prensa-digital/">Prensa Digital</a>
-        <a href="../casos/">Casos y proyectos</a>
         <a href="../">Inicio NEWS</a>
       </div>
 
@@ -240,7 +240,7 @@
         </a>
 
         <a href="../#contacto">Contacto</a>
-        <a href="https://pkprint.es">Web corporativa</a>
+        <a data-site-website href="https://pkprint.es">Web corporativa</a>
       </div>
 
     </div>
@@ -250,11 +250,12 @@
 
       <div class="footer-legal">
         <a href="https://pkprint.es/privacy-cookie-policy/">Privacidad y cookies</a>
-        <a href="https://pkprint.es">pkprint.es</a>
+        <a data-site-website href="https://pkprint.es">pkprint.es</a>
       </div>
     </div>
   </footer>
 
+  <script src="../site-config.js"></script>
   <script src="../section.js"></script>
 </body>
 </html>

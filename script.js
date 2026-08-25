@@ -2,21 +2,15 @@ document.addEventListener("DOMContentLoaded", async () => {
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 
-  try {
-    const response = await fetch("config.json", { cache: "no-store" });
-    if (response.ok) {
-      const config = await response.json();
-      if (config.contactEmail) {
-        const email = document.getElementById("contact-email");
-        if (email) {
-          email.textContent = config.contactEmail;
-          email.href = `mailto:${config.contactEmail}`;
-        }
-      }
-    }
-  } catch (error) {
-    console.debug("Configuración opcional no cargada.");
-  }
+  const requestedInterests = new Set(
+    new URLSearchParams(window.location.search).getAll("interest")
+  );
+
+  document
+    .querySelectorAll('input[name="interests[]"]')
+    .forEach((checkbox) => {
+      checkbox.checked = requestedInterests.has(checkbox.value);
+    });
 
   const form = document.getElementById("subscription-form");
   const status = document.getElementById("form-status");

@@ -6,14 +6,14 @@
   <meta name="description" content="Canal de novedades y comunicaciones de PK Print. Personalización textil, merchandising, imprenta, rotulación y soluciones online para empresas y profesionales." />
   <meta name="robots" content="index,follow" />
   <title>PK Print · Novedades y comunicaciones</title>
-  <link rel="icon" type="image/png" href="../img/favicon-news.png">
+  <link rel="icon" type="image/png" href="img/favicon-news.png">
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="https://pkprint.es" aria-label="PK Print">
+      <a class="brand" data-site-website href="https://pkprint.es" aria-label="PK Print">
   <img
     src="img/logo-pk-home.jpg"
     alt="PK"
@@ -22,7 +22,7 @@
   <span class="brand-name">PRINT</span>
 </a>
 
-      <a class="header-link" href="https://pkprint.es">Ir a pkprint.es</a>
+      <a class="header-link" data-site-website href="https://pkprint.es">Ir a pkprint.es</a>
     </div>
   </header>
 
@@ -52,7 +52,7 @@
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#suscripcion">Quiero recibir novedades</a>
-            <a class="btn btn-secondary" href="https://pkprint.es">Conocer PK Print</a>
+            <a class="btn btn-secondary" data-site-website href="https://pkprint.es">Conocer PK Print</a>
           </div>
         </div>
 
@@ -297,12 +297,12 @@
 
       <div class="contact-item">
         <strong>Web</strong>
-        <a href="https://pkprint.es">pkprint.es</a>
+        <a data-site-website href="https://pkprint.es">pkprint.es</a>
       </div>
 
       <div class="contact-item">
         <strong>Email</strong>
-        <a id="contact-email" href="mailto:comercial@pkprint.es">comercial@pkprint.es</a>
+        <a id="contact-email" data-site-email href="mailto:comercial@pkprint.es">comercial@pkprint.es</a>
       </div>
 
       <div class="contact-item">
@@ -317,7 +317,7 @@
 
       <div class="contact-item">
         <strong>Ubicación</strong>
-        <span>Sabadell · Barcelona</span>
+        <span data-site-location>Sabadell · Barcelona</span>
       </div>
 
     </div>
@@ -331,7 +331,7 @@
   <div class="container footer-grid">
 
     <div class="footer-brand">
-      <a href="https://pkprint.es" class="footer-logo-link" aria-label="PK Print">
+      <a data-site-website href="https://pkprint.es" class="footer-logo-link" aria-label="PK Print">
         <img
           src="img/logo-pkprint-blanco.png"
           alt="PK Print"
@@ -345,8 +345,8 @@
 
       <div class="footer-contact">
         <a href="tel:+34633442491">633 44 24 91</a>
-        <a href="mailto:comercial@pkprint.es">comercial@pkprint.es</a>
-        <a href="https://pkprint.es">pkprint.es</a>
+        <a data-site-email href="mailto:comercial@pkprint.es">comercial@pkprint.es</a>
+        <a data-site-website href="https://pkprint.es">pkprint.es</a>
       </div>
     </div>
 
@@ -363,7 +363,6 @@
       <span class="footer-title">PK PRINT NEWS</span>
       <a href="recursos/">Recursos</a>
       <a href="prensa-digital/">Prensa Digital</a>
-      <a href="casos/">Casos y proyectos</a>
       <a href="./">Inicio NEWS</a>
     </div>
 
@@ -372,7 +371,7 @@
       <a href="https://www.instagram.com/pkprint_brand" target="_blank" rel="noopener">Instagram · @pkprint_brand</a>
       <a href="https://wa.me/34633442491?text=Hola%20PK%20Print%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener">WhatsApp</a>
       <a href="#contacto">Contacto</a>
-      <a href="https://pkprint.es">Web corporativa</a>
+      <a data-site-website href="https://pkprint.es">Web corporativa</a>
     </div>
 
   </div>
@@ -382,12 +381,13 @@
 
     <div class="footer-legal">
       <a href="https://pkprint.es/privacy-cookie-policy/">Privacidad y cookies</a>
-      <a href="https://pkprint.es">pkprint.es</a>
+      <a data-site-website href="https://pkprint.es">pkprint.es</a>
     </div>
   </div>
 
 </footer>
 
+  <script src="site-config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

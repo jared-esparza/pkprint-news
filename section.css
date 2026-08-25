@@ -15,7 +15,7 @@ body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);backgroun
 a{color:inherit}
 .container{width:min(calc(100% - 40px),var(--max));margin:0 auto}
 .news-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
-.header-row{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.header-row{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative}
 .brand{display:flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;letter-spacing:-.04em}
 .brand-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:10px;background:var(--dark);color:#fff}
 .brand-name{font-size:1.15rem}
@@ -23,6 +23,8 @@ a{color:inherit}
 .news-nav a{font-size:.78rem;font-weight:800;text-decoration:none;text-transform:uppercase;letter-spacing:.06em}
 .news-nav a.active{color:var(--accent)}
 .corporate-link{font-size:.85rem;text-decoration:none;border-bottom:1px solid currentColor}
+.news-menu-toggle{display:none;min-height:42px;padding:0 16px;border:1px solid var(--dark);border-radius:8px;background:var(--dark);color:#fff;font:inherit;font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;cursor:pointer}
+.news-menu-toggle:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .section-hero{padding:72px 0 64px;background:var(--surface)}
 .section-hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);gap:44px;align-items:center}
 .eyebrow{display:inline-block;margin-bottom:18px;font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
@@ -48,6 +50,8 @@ a{color:inherit}
 .article-card h3{font-size:1.5rem;letter-spacing:-.035em;margin:0 0 12px}
 .article-card p{color:var(--muted);margin:0 0 24px}
 .article-link{margin-top:auto;font-weight:800;text-decoration:none}
+.article-link.is-placeholder{color:var(--muted);cursor:default}
+.btn.is-placeholder{cursor:default;pointer-events:none}
 .feature{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
 .feature-mark{min-height:330px;border-radius:22px;background:var(--accent);position:relative;overflow:hidden;display:grid;place-items:center}
 .feature-mark:before{content:"";width:180px;height:180px;border:28px solid rgba(255,255,255,.75);border-radius:50%}
@@ -82,7 +86,11 @@ a{color:inherit}
 .footer-links a{font-size:.9rem}
 .footer-bottom{padding-top:18px;border-top:1px solid #333;color:#888;font-size:.82rem}
 @media(max-width:980px){
- .news-nav{display:none}
+ .news-menu-toggle{display:inline-flex;align-items:center;justify-content:center}
+ .news-nav{display:none;position:absolute;top:calc(100% + 1px);left:0;right:0;z-index:30;flex-direction:column;align-items:stretch;gap:0;padding:10px 16px;background:#fff;border:1px solid var(--line);border-top:0;border-radius:0 0 14px 14px;box-shadow:0 16px 30px rgba(0,0,0,.09)}
+ .news-nav.is-open{display:flex}
+ .news-nav a{padding:11px 4px;border-bottom:1px solid var(--line)}
+ .news-nav a:last-child{border-bottom:0}
  .section-hero-grid,.feature,.explain,.preference-card,.cta-grid{grid-template-columns:1fr}
  .latest-grid,.case-grid{grid-template-columns:1fr}
  .article-index{margin-bottom:36px}
@@ -161,6 +169,9 @@ a{color:inherit}
 .article-inline-image figcaption{font-size:.82rem;color:var(--muted,#666);margin-top:8px}
 .article-gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
 .article-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px}
+.article-media-placeholder{width:100%;aspect-ratio:4/3;border-radius:18px}
+.article-inline-placeholder{width:100%;min-height:320px;border-radius:18px}
+.article-gallery-placeholder{width:100%;aspect-ratio:4/3;border-radius:12px}
 .article-sidebar{position:relative}
 .sidebar-box{position:sticky;top:100px;padding:22px;background:#fff;border:1px solid var(--line,#ddd);border-radius:14px}
 .sidebar-box a{display:block;padding:10px 0;text-decoration:none;border-bottom:1px solid var(--line,#ddd);font-weight:700}

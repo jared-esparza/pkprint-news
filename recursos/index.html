@@ -19,12 +19,13 @@
         >
         <span class="brand-name">PRINT NEWS</span>
       </a>
-    <nav class="news-nav" aria-label="Secciones NEWS">
+    <nav class="news-nav" id="news-navigation" aria-label="Secciones NEWS">
       <a href="../textil/">Textil</a><a href="../merchandising/">Merchandising</a><a href="../imprenta/">Imprenta</a>
       <a href="../rotulacion/">Rotulación</a><a href="../soluciones-online/">Soluciones Online</a>
       <a href="../recursos/" class="active">Recursos</a><a href="../prensa-digital/">Prensa Digital</a>
     </nav>
-    <a class="corporate-link" href="https://pkprint.es">Ir a pkprint.es</a>
+    <button class="news-menu-toggle" type="button" aria-expanded="false" aria-controls="news-navigation">Menú</button>
+    <a class="corporate-link" data-site-website href="https://pkprint.es">Ir a pkprint.es</a>
   </div>
 </header>
 
@@ -57,9 +58,9 @@
       <p class="section-kicker">La biblioteca irá creciendo y podrá enlazarse también desde pkprint.es sin duplicar archivos.</p>
     </div>
     <div class="latest-grid">
-      <article class="article-card"><span class="article-index">01</span><h3>Catálogos</h3><p>Selecciones de producto y documentación comercial organizada por áreas.</p><a class="article-link" href="#">Próximamente →</a></article>
-      <article class="article-card"><span class="article-index">02</span><h3>Plantillas de impresión</h3><p>Archivos y referencias para preparar tamaños, sangrados y zonas de seguridad.</p><a class="article-link" href="#">Próximamente →</a></article>
-      <article class="article-card"><span class="article-index">03</span><h3>Guías prácticas</h3><p>Documentos breves para elegir técnicas, materiales y configuraciones con más criterio.</p><a class="article-link" href="#">Próximamente →</a></article>
+<article class="article-card"><span class="article-index">01</span><h3>Catálogos</h3><p>Selecciones de producto y documentación comercial organizada por áreas.</p><span class="article-link is-placeholder">Próximamente</span></article>
+<article class="article-card"><span class="article-index">02</span><h3>Plantillas de impresión</h3><p>Archivos y referencias para preparar tamaños, sangrados y zonas de seguridad.</p><span class="article-link is-placeholder">Próximamente</span></article>
+<article class="article-card"><span class="article-index">03</span><h3>Guías prácticas</h3><p>Documentos breves para elegir técnicas, materiales y configuraciones con más criterio.</p><span class="article-link is-placeholder">Próximamente</span></article>
     </div>
   </div>
 </section>
@@ -83,7 +84,7 @@
     <div class="preference-card">
       <div><span class="eyebrow">ECOSISTEMA PK PRINT</span><h2>Una sola biblioteca, dos puertas de entrada.</h2>
       <p>Los recursos pueden consultarse desde PK Print NEWS y enlazarse desde la web oficial, manteniendo siempre una única versión actualizada.</p></div>
-      <div class="preference-actions"><a class="btn btn-blue" href="https://pkprint.es">Ir a pkprint.es</a></div>
+      <div class="preference-actions"><a class="btn btn-blue" data-site-website href="https://pkprint.es">Ir a pkprint.es</a></div>
     </div>
   </div>
 </section>
@@ -93,7 +94,7 @@
     <div class="container footer-grid">
 
       <div class="footer-brand">
-        <a href="https://pkprint.es" class="footer-logo-link" aria-label="PK Print">
+        <a data-site-website href="https://pkprint.es" class="footer-logo-link" aria-label="PK Print">
           <img
             src="../img/logo-pkprint-blanco.png"
             alt="PK Print"
@@ -107,8 +108,8 @@
 
         <div class="footer-contact">
           <a href="tel:+34633442491">633 44 24 91</a>
-          <a href="mailto:comercial@pkprint.es">comercial@pkprint.es</a>
-          <a href="https://pkprint.es">pkprint.es</a>
+          <a data-site-email href="mailto:comercial@pkprint.es">comercial@pkprint.es</a>
+          <a data-site-website href="https://pkprint.es">pkprint.es</a>
         </div>
       </div>
 
@@ -125,7 +126,6 @@
         <span class="footer-title">PK PRINT NEWS</span>
         <a href="../recursos/">Recursos</a>
         <a href="../prensa-digital/">Prensa Digital</a>
-        <a href="../casos/">Casos y proyectos</a>
         <a href="../">Inicio NEWS</a>
       </div>
 
@@ -149,7 +149,7 @@
         </a>
 
         <a href="../#contacto">Contacto</a>
-        <a href="https://pkprint.es">Web corporativa</a>
+        <a data-site-website href="https://pkprint.es">Web corporativa</a>
       </div>
 
     </div>
@@ -159,10 +159,11 @@
 
       <div class="footer-legal">
         <a href="https://pkprint.es/privacy-cookie-policy/">Privacidad y cookies</a>
-        <a href="https://pkprint.es">pkprint.es</a>
+        <a data-site-website href="https://pkprint.es">pkprint.es</a>
       </div>
     </div>
   </footer>
+<script src="../site-config.js"></script>
 <script src="../section.js"></script>
 </body>
 </html>

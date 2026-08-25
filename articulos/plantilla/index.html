@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PK Print NEWS · Plantilla de artículo</title>
+  <link rel="icon" type="image/png" href="../../img/favicon-news.png">
   <link rel="stylesheet" href="../../section.css">
 </head>
 <body>
 <header class="news-header">
   <div class="container header-row">
     <a class="brand" href="../../">PK PRINT NEWS</a>
-    <nav class="news-nav">
+    <nav class="news-nav" id="news-navigation" aria-label="Secciones NEWS">
       <a href="../../textil/">Textil</a>
       <a href="../../merchandising/">Merchandising</a>
       <a href="../../imprenta/">Imprenta</a>
@@ -19,7 +20,8 @@
       <a href="../../recursos/">Recursos</a>
       <a href="../../prensa-digital/">Prensa Digital</a>
     </nav>
-    <a href="https://pkprint.es">Ir a pkprint.es</a>
+    <button class="news-menu-toggle" type="button" aria-expanded="false" aria-controls="news-navigation">Menú</button>
+    <a class="corporate-link" data-site-website href="https://pkprint.es">Ir a pkprint.es</a>
   </div>
 </header>
 
@@ -34,7 +36,7 @@
           <div class="article-meta">PK Print · Fecha de publicación</div>
         </div>
         <figure class="article-main-media">
-          <img src="../../img/articulos/ejemplo-principal.jpg" alt="Imagen principal del artículo">
+          <div class="article-media-placeholder placeholder-media" role="img" aria-label="Espacio para la imagen principal">Imagen principal</div>
         </figure>
       </div>
     </header>
@@ -47,16 +49,16 @@
         <p>Desarrolla aquí el contenido principal del artículo.</p>
 
         <figure class="article-inline-image">
-          <img src="../../img/articulos/ejemplo-interior.jpg" alt="Imagen de apoyo">
+          <div class="article-inline-placeholder placeholder-media" role="img" aria-label="Espacio para una imagen de apoyo">Imagen de apoyo</div>
           <figcaption>Pie de foto opcional.</figcaption>
         </figure>
 
         <h2>Galería del proyecto o ejemplo</h2>
         <div class="article-gallery">
-          <img src="../../img/articulos/galeria-01.jpg" alt="Detalle 1">
-          <img src="../../img/articulos/galeria-02.jpg" alt="Detalle 2">
-          <img src="../../img/articulos/galeria-03.jpg" alt="Detalle 3">
-          <img src="../../img/articulos/galeria-04.jpg" alt="Detalle 4">
+          <div class="article-gallery-placeholder placeholder-media" role="img" aria-label="Espacio para el detalle 1">Detalle 1</div>
+          <div class="article-gallery-placeholder placeholder-media" role="img" aria-label="Espacio para el detalle 2">Detalle 2</div>
+          <div class="article-gallery-placeholder placeholder-media" role="img" aria-label="Espacio para el detalle 3">Detalle 3</div>
+          <div class="article-gallery-placeholder placeholder-media" role="img" aria-label="Espacio para el detalle 4">Detalle 4</div>
         </div>
 
         <h2>Conclusión</h2>
@@ -76,7 +78,7 @@
           <span class="eyebrow">RELACIONADO</span>
           <a href="../../recursos/">Ver recursos →</a>
           <a href="../../prensa-digital/">Prensa digital →</a>
-          <a href="https://pkprint.es">Servicios PK Print →</a>
+          <a data-site-website href="https://pkprint.es">Servicios PK Print →</a>
         </div>
       </aside>
     </div>
@@ -87,7 +89,7 @@
     <div class="container footer-grid">
 
       <div class="footer-brand">
-        <a href="https://pkprint.es" class="footer-logo-link" aria-label="PK Print">
+        <a data-site-website href="https://pkprint.es" class="footer-logo-link" aria-label="PK Print">
           <img
             src="../../img/logo-pkprint-blanco.png"
             alt="PK Print"
@@ -101,8 +103,8 @@
 
         <div class="footer-contact">
           <a href="tel:+34633442491">633 44 24 91</a>
-          <a href="mailto:comercial@pkprint.es">comercial@pkprint.es</a>
-          <a href="https://pkprint.es">pkprint.es</a>
+          <a data-site-email href="mailto:comercial@pkprint.es">comercial@pkprint.es</a>
+          <a data-site-website href="https://pkprint.es">pkprint.es</a>
         </div>
       </div>
 
@@ -119,7 +121,6 @@
         <span class="footer-title">PK PRINT NEWS</span>
         <a href="../../recursos/">Recursos</a>
         <a href="../../prensa-digital/">Prensa Digital</a>
-        <a href="../../casos/">Casos y proyectos</a>
         <a href="../../">Inicio NEWS</a>
       </div>
 
@@ -143,7 +144,7 @@
         </a>
 
         <a href="../../#contacto">Contacto</a>
-        <a href="https://pkprint.es">Web corporativa</a>
+        <a data-site-website href="https://pkprint.es">Web corporativa</a>
       </div>
 
     </div>
@@ -153,10 +154,11 @@
 
       <div class="footer-legal">
         <a href="https://pkprint.es/privacy-cookie-policy/">Privacidad y cookies</a>
-        <a href="https://pkprint.es">pkprint.es</a>
+        <a data-site-website href="https://pkprint.es">pkprint.es</a>
       </div>
     </div>
   </footer>
+<script src="../../site-config.js"></script>
 <script src="../../section.js"></script>
 </body>
 </html>
