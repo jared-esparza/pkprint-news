@@ -1,0 +1,43 @@
+name: Despliegue IONOS
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-ionos-main
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Subir sitio por SFTP
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Subir al hosting por SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
+          username: ${{ secrets.IONOS_USER }}
+          server: ${{ secrets.IONOS_HOST }}
+          port: 22
+          password: ${{ secrets.IONOS_PASSWORD }}
+          sftp_only: true
+          local_path: './*'
+          remote_path: '/'
+          rsyncArgs: >-
+            --exclude=.git
+            --exclude=.github
+            --exclude=*.md
+            --exclude=tests
+            --exclude=test-results
+            --exclude=playwright-report
+            --exclude=debug.log
